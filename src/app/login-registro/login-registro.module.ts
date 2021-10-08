@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavLoginComponent } from './nav-login/nav-login.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-import { LoginRegistroMainComponent } from './login-registro-main/login-registro-main.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegistroComponent,
-    LoginRegistroMainComponent
+    RegistroComponent
+  ],
+  exports: [
+    NavLoginComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class LoginRegistroModule { }
+export class LoginRegistroModule { 
+
+}

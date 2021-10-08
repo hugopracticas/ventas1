@@ -1,0 +1,9 @@
+.nav-login{
+    background-color: aqua;
+    text-align: center;
+}
+
+a{
+    margin: 20px;
+    cursor: pointer;
+}

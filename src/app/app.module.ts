@@ -2,17 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginRegistroModule } from './login-registro/login-registro.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { NavLoginComponent } from './login-registro/nav-login/nav-login.component';
+import { NabbarComponent } from './nabbar/nabbar.component';
+import { HomeModule } from './home/home.module';
+import { ProductoModule } from './producto/producto.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    NavLoginComponent,
+    NabbarComponent
   ],
   imports: [
     BrowserModule,
-    LoginRegistroModule
+    AppRoutingModule,
+    HomeModule,
+    ProductoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
