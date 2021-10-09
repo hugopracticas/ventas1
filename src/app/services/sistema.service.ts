@@ -67,4 +67,8 @@ export class SistemaService{
     get productos(): Producto[]{
         return [...this._productos];
     }
+
+    agregarProducto( producto: Producto ){
+        this._productos.push( producto );
+    }
 }

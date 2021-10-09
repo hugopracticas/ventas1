@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SistemaService } from 'src/app/services/sistema.service';
+import { Producto } from '../../interfaces/sistema.interface';
 
 @Component({
   selector: 'app-agreg-producto',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregProductoComponent implements OnInit {
 
-  constructor() { }
+  constructor( private sistemaService: SistemaService ) { }
 
   ngOnInit(): void {
+  }
+
+  producto: Producto = {
+    nombre: '',
+    marca: '',
+    categoria: '',
+    costo: 0,
+    imagen: '',
+    descripcion: '',
+    identificador: ''
+  }
+
+  agregarProducto(){
+    this.sistemaService.agregarProducto( this.producto );
+    console.log( this.producto );
+    this.producto = {
+      nombre: '',
+      marca: '',
+      categoria: '',
+      costo: 0,
+      imagen: '',
+      descripcion: '',
+      identificador: ''
+    }
   }
 
 }

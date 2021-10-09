@@ -1,12 +1,42 @@
 <div class="card">
     <div class="card-body">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+        <form  (ngSubmit)="agregarProducto()">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre del producto"
+                    name="nombre" [(ngModel)]="producto.nombre">
+
+                <label for="exampleFormControlInput1" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marca del producto"
+                    name="marca" [(ngModel)]="producto.marca">
+
+                <label for="exampleFormControlInput1" class="form-label">Categoria</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Categoria del producto" name="categoria" [(ngModel)]="producto.categoria">
+
+                <label for="exampleFormControlInput1" class="form-label">Costo</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Cosot del producto"
+                    name="costo" [(ngModel)]="producto.costo">
+
+                <label for="exampleFormControlInput1" class="form-label">Url Imagen</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imagen" name="imagen"
+                    [(ngModel)]="producto.imagen">
+
+                <label for="exampleFormControlInput1" class="form-label">Identificador</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Identificador del producto" name="identificador" [(ngModel)]="producto.identificador">
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion del producto</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"
+                    [(ngModel)]="producto.descripcion"></textarea>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-outline-dark" 
+                    type="submit">Guardar</button>
+            </div>
+        </form>
     </div>
 </div>

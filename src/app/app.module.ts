@@ -8,6 +8,7 @@ import { NavLoginComponent } from './login-registro/nav-login/nav-login.componen
 import { NabbarComponent } from './nabbar/nabbar.component';
 import { HomeModule } from './home/home.module';
 import { ProductoModule } from './producto/producto.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,11 +21,14 @@ import { ProductoModule } from './producto/producto.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HomeModule,
     ProductoModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
