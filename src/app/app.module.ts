@@ -9,6 +9,7 @@ import { NabbarComponent } from './nabbar/nabbar.component';
 import { HomeModule } from './home/home.module';
 import { ProductoModule } from './producto/producto.module';
 import { FormsModule } from '@angular/forms';
+import { LoginRegistroModule } from './login-registro/login-registro.module';
 
 
 
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
     HomeModule,
+    LoginRegistroModule,
     ProductoModule
   ],
   providers: [

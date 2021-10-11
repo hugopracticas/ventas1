@@ -14,6 +14,8 @@ export class ListaProductosComponent implements OnInit {
   }
 
   get productos(){
+    console.log('Productos');
+    console.log(this.sistemaService.productos);
     return this.sistemaService.productos;
   }
 

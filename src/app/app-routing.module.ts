@@ -6,6 +6,7 @@ import { RegistroComponent } from "./login-registro/registro/registro.component"
 import { ListaProductosComponent } from './home/lista-productos/lista-productos.component';
 import { AgregProductoComponent } from './producto/agreg-producto/agreg-producto.component';
 import { SistemaService } from './services/sistema.service';
+import { ListaAdminComponent } from "./home/lista-admin/lista-admin.component";
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: 'agregarAdmin',
         component: AddAdminComponent
+    },
+    {
+        path: 'listaAdmin',
+        component: ListaAdminComponent
     }
 ]
 

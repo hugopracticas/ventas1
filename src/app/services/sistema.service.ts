@@ -1,11 +1,23 @@
 import { Injectable } from "@angular/core";
+import { Administrador } from "../interfaces/loginRegistro";
 import { Producto } from '../interfaces/sistema.interface';
 
 @Injectable()
-export class SistemaService{
-    constructor(){
-
+export class SistemaService {
+    constructor() {
+        localStorage.setItem('resultados', JSON.stringify(this.productos));
     }
+
+    private _administradores: Administrador[] = [
+        {
+            nombre: 'Simon',
+            apellidoP: 'Oz',
+            apellidoM: 'Perez',
+            fechaIngreso: '',
+            salario: 20000,
+            identificador: 'admin12345'
+        }
+    ];
 
     private _productos: Producto[] = [
         {
@@ -64,11 +76,30 @@ export class SistemaService{
         }
     ];
 
-    get productos(): Producto[]{
+    /**
+     * Metodos para la seccion de productos
+     */
+    get productos(): Producto[] {
         return [...this._productos];
     }
 
-    agregarProducto( producto: Producto ){
-        this._productos.push( producto );
+    agregarProducto(producto: Producto) {
+        this._productos.push(producto);
+
+        localStorage.setItem('resultados', JSON.stringify(this.productos));
     }
+
+    /**
+     * Metodos para la seccion de login y registro
+     */
+
+    get administradores(): Administrador[]{
+        return [...this._administradores]
+    }
+
+    agregarAdministrador( admin: Administrador){
+        this._administradores.push( admin );
+    }
+
+    
 }

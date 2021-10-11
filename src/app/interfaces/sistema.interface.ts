@@ -7,3 +7,4 @@ export interface Producto{
     descripcion: string
     identificador: string
 }
+
